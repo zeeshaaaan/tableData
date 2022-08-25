@@ -1,0 +1,16 @@
+<div class="container">
+    <table>
+        <thead>
+            <th (click)="sort('name')">Product Name <i class="fa fa-sort"></i>  </th>
+            <th (click)="sort('price')">Price <i class="fa fa-sort"></i></th>
+            <th (click)="sort('category')">Category <i class="fa fa-sort"></i></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coke of products | orderBy: key: reverse ">
+                <td class="data">{{coke.name}}</td>
+                <td class="data">{{coke.price}}</td>
+                <td class="data">{{coke.category}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
